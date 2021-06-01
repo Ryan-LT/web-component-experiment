@@ -3,16 +3,40 @@
   <head>
     <title>Web Components Experiment</title>
     <style>
-        h1 {
-            color: cyan;
-        }
+      h1 {
+        color: rgb(163, 91, 185);
+      }
+      .list {
+        display: flex;
+        gap: 24px;
+      }
     </style>
   </head>
   <body>
     <h1>Web Components Experiment</h1>
-    <user-card name="Ryan Le"></user-card>
-    <user-card name="Mike Posner"></user-card>
-    <user-card name="Brad Pitt"></user-card>
+    <div class="list">
+      <user-card
+        name="Leonardo DiCaprio"
+        imgUrl="https://resizing.flixster.com/eSrEPooElA53YIe489a-xQqHp-E=/506x652/v2/https://flxt.tmsimg.com/v9/AllPhotos/435/435_v9_bc.jpg"
+      >
+        <span slot="origin">United States</span>
+        <span slot="occupation">Actor</span>
+      </user-card>
+      <user-card
+        name="Mike Posner"
+        imgUrl="https://cdns-images.dzcdn.net/images/artist/1f5d2e0ab86eb5e21d5c3a86b9b19409/500x500.jpg"
+      >
+        <span slot="origin">United States</span>
+        <span slot="occupation">Singer</span>
+      </user-card>
+      <user-card
+        name="Brad Pitt"
+        imgUrl="https://upload.wikimedia.org/wikipedia/commons/4/4c/Brad_Pitt_2019_by_Glenn_Francis.jpg"
+      >
+        <span slot="origin">United States</span>
+        <span slot="occupation">Actor</span>
+      </user-card>
+    </div>
     <script src="userCard.js"></script>
   </body>
 </html>
